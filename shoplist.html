@@ -17,12 +17,17 @@
 			
 			<p>
 			  <input type="text" name="item" id="add-item" placeholder="Add item"/>
-			  <button id="submit-button">Submit</button>
 			</p>
 
-			<div id="shopping-list">
-				<ol id="list-items"></ol>
+			<div id="buttons">
+				<button id="submit-button">Submit</button>
+			 	<button id="clear-button">Clear List</button>
+			</div>
 
+			<div id="shopping-list">
+				<ol id="list-items" onclick="myFunction()">
+					<li id="items"></li>
+				</ol>
 			</div>
 
 		</div>

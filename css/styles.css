@@ -12,7 +12,12 @@ body {
 #titlebar {
 	text-align: center;
 	margin-top: 60px;
-	color: #212121;
+}
+
+#titlebar h1 {
+	color: #0d47a1;
+	font-size: 50px;
+	font-family: Helvitica;
 }
 
 #add-item {
@@ -21,13 +26,21 @@ body {
 	text-align: center;
 }
 
-#submit-button {
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 20px;
-	margin-left: 47%;
-	margin-right: 47%;
+#buttons {
+	width: 180px;
+	height: 30px;
+	margin: auto;
 }
+
+#submit-button {
+	margin-right: 10px;
+}
+
+#clear-button {
+	margin-left: 10px;
+}
+
+
 
 #shopping-list {
 	width: 200px;
@@ -38,5 +51,8 @@ body {
 
 li {
 	list-style: decimal;
+	font-size: 25px;
+	font-weight: 700;
+	color: #0d47a1;
 	
 }

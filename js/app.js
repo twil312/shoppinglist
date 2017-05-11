@@ -6,10 +6,15 @@ var newText=document.getElementById("add-item").value;
 	    newText=document.getElementById("add-item").value;
 	    listArray.push(newText)
 	    renderList()
+	    newText=document.getElementById("add-item").value=null;
+	}
+
+	document.getElementById("clear-button").onclick=function() {
+	     document.getElementById("list-items").innerHTML=null;
 	}
 	      
 	function renderList() {
-	var buildHtml = "<ul>"
+	var buildHtml = "<ol>"
 	  //Build HTML output for list// 
 	  for(var i=0;i < listArray.length;i++) {
 	    
@@ -17,7 +22,15 @@ var newText=document.getElementById("add-item").value;
 	    
 	  } 
 	  //render results of list to the DOM
-	  document.getElementById("list-items").innerHTML=buildHtml;  
+	  document.getElementById("list-items").innerHTML=buildHtml; 
+	  
 	};
 
+
+    
+    function myFunction() {
+    var str = "";
+    var result = str.strike();
+    document.getElementById("list-items").innerHTML = result;
+}
 
