@@ -1,5 +1,76 @@
-var newText=document.getElementById("add-item").value;
-	var listArray= [];
+//Model
+var state = {
+	itemsList: ["Blueberries", "Coffee", "Apples"];
+
+};
+
+
+function addItems(state, item) {
+	state.itemsList.push(item);
+};
+
+function removeItems(state, item) {
+	state.itemsList.splice();	
+};
+
+
+
+
+
+
+
+
+
+//View
+function renderList() {
+	var buildHtml = "<ol>"
+	  //Build HTML output for list// 
+	  for(var i=0;i < listItems.length;i++) {
+	    
+	    buildHtml+="<li>" + listItems[i] + "</li>"
+	    
+	  } 
+	  //render results of list to the DOM
+	  document.getElementById("listItems").innerHTML=buildHtml; 
+	  
+	};
+
+
+
+
+
+
+
+
+
+
+
+//Controller
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	var listArray= [];
 	//Submit button performs action
 	document.getElementById("submit-button").onclick=function() {
 	    //Value is taken from input field and sent to newtext
@@ -32,5 +103,4 @@ var newText=document.getElementById("add-item").value;
     var str = "";
     var result = str.strike();
     document.getElementById("list-items").innerHTML = result;
-}
-
+} */
