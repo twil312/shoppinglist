@@ -1,12 +1,13 @@
 //Model
 var state = {
-	itemsList: ["Blueberries", "Coffee", "Apples"];
+	itemsList: []
 
 };
 
 
 function addItems(state, item) {
-	state.itemsList.push(item);
+	state.itemsList[""].push(item);
+	item = document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml;
 };
 
 function removeItems(state, item) {
@@ -25,13 +26,13 @@ function removeItems(state, item) {
 function renderList() {
 	var buildHtml = "<ol>"
 	  //Build HTML output for list// 
-	  for(var i=0;i < listItems.length;i++) {
+	  for(var i=0;i < itemsList.length;i++) {
 	    
-	    buildHtml+="<li>" + listItems[i] + "</li>"
+	    buildHtml+="<li>" + itemsList[i] + "</li>"
 	    
 	  } 
 	  //render results of list to the DOM
-	  document.getElementById("listItems").innerHTML=buildHtml; 
+	  document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml; 
 	  
 	};
 
@@ -47,8 +48,16 @@ function renderList() {
 
 //Controller
 
+document.getElementById("submitButton").addEventListener("click", function() {
+	event.preventDefault();
+	addItems();
+});
 
 
+
+document.getElementById("clearButton").addEventListener("click", function() {
+	 
+});
 
 
 
