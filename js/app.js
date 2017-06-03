@@ -1,13 +1,12 @@
 //Model
 var state = {
-	itemsList: []
+	itemsList: [""]
 
 };
 
 
 function addItems(state, item) {
 	state.itemsList[""].push(item);
-	item = document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml;
 };
 
 function removeItems(state, item) {
