@@ -1,12 +1,13 @@
 //Model
-var state = {
-	itemsList: [""]
+var item = document.getElementById("addItem");
 
+var state = {
+	itemsList: ["milk", "cheese"]
 };
 
 
 function addItems(state, item) {
-	state.itemsList[""].push(item);
+	state.itemsList.push(item);
 };
 
 function removeItems(state, item) {
@@ -23,17 +24,15 @@ function removeItems(state, item) {
 
 //View
 function renderList() {
-	var buildHtml = "<ol>"
+	addItems();
+	var buildHtml = "<ol>";
 	  //Build HTML output for list// 
 	  for(var i=0;i < itemsList.length;i++) {
-	    
 	    buildHtml+="<li>" + itemsList[i] + "</li>"
-	    
 	  } 
 	  //render results of list to the DOM
 	  document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml; 
-	  
-	};
+};
 
 
 
@@ -49,13 +48,13 @@ function renderList() {
 
 document.getElementById("submitButton").addEventListener("click", function() {
 	event.preventDefault();
-	addItems();
+	renderList();
 });
 
 
 
 document.getElementById("clearButton").addEventListener("click", function() {
-	 
+	 removeItems();
 });
 
 
