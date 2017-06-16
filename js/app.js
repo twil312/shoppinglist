@@ -7,7 +7,7 @@ var state = {
 
 
 function addItems(state, item) {
-	state.itemsList.push(item);
+	state.itemsList.push();
 };
 
 function removeItems(state, item) {
@@ -27,8 +27,8 @@ function renderList() {
 	addItems();
 	var buildHtml = "<ol>";
 	  //Build HTML output for list// 
-	  for(var i=0;i < itemsList.length;i++) {
-	    buildHtml+="<li>" + itemsList[i] + "</li>"
+	  for(var i=0;i < state.itemsList.length;i++) {
+	    buildHtml+="<li>" + state.itemsList[i] + "</li>"
 	  } 
 	  //render results of list to the DOM
 	  document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml; 
