@@ -7,7 +7,7 @@ var state = {
 
 
 function addItems(state, item) {
-	state.itemsList.push();
+	state.itemsList.push(item);
 };
 
 function removeItems(state, item) {
@@ -24,7 +24,6 @@ function removeItems(state, item) {
 
 //View
 function renderList() {
-	addItems();
 	var buildHtml = "<ol>";
 	  //Build HTML output for list// 
 	  for(var i=0;i < state.itemsList.length;i++) {
@@ -43,12 +42,11 @@ function renderList() {
 
 
 
-
 //Controller
 
 document.getElementById("submitButton").addEventListener("click", function() {
 	event.preventDefault();
-	renderList();
+	addItems();
 });
 
 
