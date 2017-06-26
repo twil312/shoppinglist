@@ -1,58 +1,51 @@
-//Model
+
 var item = document.getElementById("addItem");
 
 var state = {
 	itemsList: ["milk", "cheese"]
 };
 
+var deleteTemplate = "<li> + xButton + </li>" 
+	
+
+
 
 function addItems(state, item) {
 	state.itemsList.push(item);
 };
 
-function removeItems(state, item) {
-	state.itemsList.splice();	
+function removeItems(state, indexNumber) {
+	state.itemsList.splice(indexNumber, 1);	
 };
 
 
 
-
-
-
-
-
-
-//View
-function renderList() {
-	var buildHtml = "<ol>";
+function renderList(state, item) {
+	var buildHtml = "<ul>";
 	  //Build HTML output for list// 
 	  for(var i=0;i < state.itemsList.length;i++) {
+	    
 	    buildHtml+="<li>" + state.itemsList[i] + "</li>"
+	    
 	  } 
 	  //render results of list to the DOM
-	  document.getElementsByClassName("itemsList")[0].innerHTML=buildHtml; 
+	  document.getElementById("itemsList").innerHTML=buildHtml; 
+	  
 };
 
 
-
-
-
-
-
-
-
-
-//Controller
 
 document.getElementById("submitButton").addEventListener("click", function() {
 	event.preventDefault();
-	addItems();
+	addItems(state, item);
+	renderList(state, item);
 });
 
 
 
 document.getElementById("clearButton").addEventListener("click", function() {
-	 removeItems();
+	 event.preventDefault();
+	 removeItems(state, indexNumber);
 });
 
 
