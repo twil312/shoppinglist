@@ -5,9 +5,7 @@ var state = {
 	itemsList: ["milk", "cheese"]
 };
 
-var deleteTemplate = "<li> + xButton + </li>" 
-	
-
+ 
 
 
 function addItems(state, item) {
@@ -25,7 +23,8 @@ function renderList(state, item) {
 	  //Build HTML output for list// 
 	  for(var i=0;i < state.itemsList.length;i++) {
 	    
-	    buildHtml+="<li>" + state.itemsList[i] + "</li>"
+	    buildHtml+="<li>" + state.itemsList[i] + "<button>" + "X" + 
+	    "</button>" + "</li>"
 	    
 	  } 
 	  //render results of list to the DOM
