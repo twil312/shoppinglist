@@ -1,5 +1,6 @@
 
 var item = document.getElementById("addItem");
+var check = document.getElementById("checkMark");
 
 var state = {
 	itemsList: ["milk", "cheese"]
@@ -23,7 +24,7 @@ function renderList(state, item) {
 	  //Build HTML output for list// 
 	  for(var i=0;i < state.itemsList.length;i++) {
 	    
-	    buildHtml+="<li>" + state.itemsList[i] + "<button>" + "X" + 
+	    buildHtml+="<li>" + "<button>" + "<i class='fa fa-check' aria-hidden='hidden'>" + "</button>" + "</i>" + state.itemsList[i] + "<button>" + "X" + 
 	    "</button>" + "</li>"
 	    
 	  } 
