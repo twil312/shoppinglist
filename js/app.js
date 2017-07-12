@@ -1,5 +1,5 @@
 
-var item = document.getElementById("addItem");
+//var item = document.getElementById("addItem");
 var check = document.getElementById("checkMark");
 
 var state = {
@@ -8,13 +8,22 @@ var state = {
 
  
 function handleItemAdds() {
-	get the item value from the input
+	$("#submitButton").click(function() {
+	event.preventDefault();
+	var newItem = $("#addItem").val();
+	addItems(state, newItem);
+	renderList(state, item);
 
+	});
 }; 
 
-function handleItemDeletes() {
+/*function handleItemDeletes() {
 	deletes item from itemsList
-};
+	document.getElementById("clearButton").addEventListener("click", function() {
+	 event.preventDefault();
+	 removeItems(state, indexNumber);
+});
+};*/
 
 function addItems(state, item) {
 	state.itemsList.push(item);
@@ -42,18 +51,10 @@ function renderList(state, item) {
 
 
 
-document.getElementById("submitButton").addEventListener("click", function() {
-	event.preventDefault();
-	addItems(state, item);
-	renderList(state, item);
-});
 
 
 
-document.getElementById("clearButton").addEventListener("click", function() {
-	 event.preventDefault();
-	 removeItems(state, indexNumber);
-});
+
 
 
 
