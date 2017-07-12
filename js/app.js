@@ -7,7 +7,14 @@ var state = {
 };
 
  
+function handleItemAdds() {
+	get the item value from the input
 
+}; 
+
+function handleItemDeletes() {
+	deletes item from itemsList
+};
 
 function addItems(state, item) {
 	state.itemsList.push(item);
@@ -24,8 +31,8 @@ function renderList(state, item) {
 	  //Build HTML output for list// 
 	  for(var i=0;i < state.itemsList.length;i++) {
 	    
-	    buildHtml+="<li>" + "<button>" + "<i class='fa fa-check' aria-hidden='hidden'>" + "</button>" + "</i>" + state.itemsList[i] + "<button>" + "X" + 
-	    "</button>" + "</li>"
+	    buildHtml+="<div class='listCell'>" + "<li>" + "<button class='xButton'>" + "<i class='fa fa-check' aria-hidden='hidden'>" + "</button>" + "</i>" + state.itemsList[i] + "<button>" + "X" + 
+	    "</button>" + "</li>" + "</div";
 	    
 	  } 
 	  //render results of list to the DOM
